@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Multiplication{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method = "post">
+        <label for="num1">First Number</label>
+        <input name = "num1", id = "num1" required>
+        <label for="num2">Second Number</label>
+        <input name = "num2", id = "num2" required>
+        <input type = "submit" value = "calculate">
+    </form>
+
+    <hr style="width:50%;text-align:left;margin-left:0">
+
+    {% if solution %} 
+        <p> {{ solution }} </p>
+    {% endif %}
+
+{% endblock %}

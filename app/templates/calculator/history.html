@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}History{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for calculation in calculations %}
+        <h2>{{ calculation["operand"] }}</h2>
+        <p>Num1: {{ calculation["num1"] }}</p>
+        <p>Num2: {{ calculation["num2"] }}</p>
+        <p>Solution: {{ calculation["solution"] }}</p>
+        <hr style="width:50%;text-align:left;margin-left:0">
+    {% endfor %}
+{% endblock %}

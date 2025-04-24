@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Index{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <ul>
+        <a href="{{ url_for('calculator.addition') }}">
+            <button type="button" style="margin-right: 10px;">Addition</button>
+        </a>
+        <a href= "{{ url_for('calculator.multiplication') }} ">
+            <button type="button">Multiplication</button>
+        </a>
+    </ul>
+
+{% endblock %}

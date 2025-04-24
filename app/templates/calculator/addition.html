@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Addition{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method = "post">
+        <label for="num1">First Number</label>
+        <input name = "num1", id = "budget_constraint" required>
+        <label for="num1">Second Number</label>
+        <input name = "num2", id = "land_constraint" required>
+        <input type = "submit" value = "calculate">
+    </form>
+
+    <hr style="width:50%;text-align:left;margin-left:0">
+
+    {% if solution %} 
+        <p> {{ solution }} </p>
+    {% endif %}
+
+{% endblock %}
